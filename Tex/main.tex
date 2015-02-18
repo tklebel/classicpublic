@@ -1,0 +1,107 @@
+\documentclass[a4paper, german, oneside]{scrbook}
+
+\usepackage[german]{babel} %ngerman
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage[T1]{fontenc}  
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+
+\usepackage{datetime}
+\newdate{date}{15}{07}{2014}
+\date{\displaydate{date}}
+
+% Fußnote für Tabellen
+\usepackage{tablefootnote}
+\usepackage{amsmath}
+
+% Auflistung in Text mit \begin{inparaenum}[(i)] und dann \item
+\usepackage{paralist}
+% Bessere Formatierung für Tabellen
+\usepackage{booktabs}
+
+
+\usepackage[babel,german=quotes]{csquotes}  % Deutsche Anführungszeichen mit \enquote{}
+
+\usepackage[nottoc]{tocbibind}
+\usepackage[style=authoryear, backend=biber, firstinits=false]{biblatex} % firstinits kürzt die Vornamen ab
+% \addbibresource{literatur_semesterarbeit.bib}
+
+\DefineBibliographyStrings{english}{andothers={et\ al\adddot}} % "u.a." zu "et al." 
+% \DefineBibliographyStrings{english}{bibliography = {References}}
+% \DefineBibliographyStrings{german}{bibliography = {Literaturverzeichnis}}
+
+
+%richtige Reihenfolge bei mehreren Autoren
+\DeclareNameAlias{sortname}{last-first}
+
+%keine Klammern in Biblio
+\renewbibmacro*{date+extrayear}{%
+  \iffieldundef{year}
+    {}
+    {\printtext{\printdateextra}}}
+
+\renewcommand*{\mkbibnamefirst}[1]{#1\addcomma} % #1 
+
+% Commands für Textcite und Parencite mit Dropdownmenü
+\newcommand{\citet}[1]{\textcite{#1}} 
+\newcommand{\citep}[1]{\parencite{#1}}
+
+
+% % Blockzitat mit Anführungszeichen
+% \renewcommand*{\mkblockquote}[4]{\enquote{#1}#2#4#3}
+
+\begin{document}
+	\begin{titlepage}
+	
+		\begin{center}
+
+
+		% Oberer Teil der Titelseite:
+		% \includegraphics[width=0.15\textwidth]{./logo}\\[1cm]    
+
+		\textsc{\LARGE Universität für Musik und Darstellende Kunst Graz}\\[1.5cm]
+
+		% Titel der LV
+		% \textsc{\Large Multivariate Datenanalyse (SS 2014)}\\[0.5cm]
+
+
+		% Title
+		\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+		\HRule \\[0.4cm]
+		{ \huge \bfseries Irgendwas mit Publikum}\\[0.4cm]
+
+		\HRule \\[2.5cm] % Bei Untertitel auf 0.5 zurücksetzen
+
+
+		% \Large Untertitel	\\[2cm]
+		% Evtl Wortumfang der Arbeit hier einfügen
+
+		\Large \emph{Autor}:\\
+		Thomas \textsc{Klebel}\\[0.1cm]
+		\large 1073073\\[1cm]
+
+		\Large \emph{Betreuerein:}\\
+		Christa \textsc{Brüstle}\\[1cm]
+
+		% \includegraphics[scale=0.5]{uni-graz_color.jpg}\\[1cm]    
+
+
+		\vfill
+
+		% Unterer Teil der Seite
+		\Large{\today}\\[1cm]
+		\normalsize{Zeichensatz mit \LaTeX}
+		
+
+		\end{center}
+
+	\end{titlepage}
+
+\tableofcontents
+
+
+% \printbibliography
+\end{document}
