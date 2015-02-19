@@ -49,6 +49,11 @@
 \newcommand{\citet}[1]{\textcite{#1}} 
 \newcommand{\citep}[1]{\parencite{#1}}
 
+% fix weird problem with unicode
+\DeclareUnicodeCharacter{00A0}{ }
+
+
+
 
 % % Blockzitat mit Anführungszeichen
 % \renewcommand*{\mkblockquote}[4]{\enquote{#1}#2#4#3}
@@ -102,8 +107,8 @@
 
 \tableofcontents
 
-\chapter{Einleitung}
-
+\chapter*{Vorwort}
+\addcontentsline{toc}{chapter}{Vorwort}
 
 Im ersten Teil der Arbeit soll die Entwicklung des klassischen Konzerts, insbesondere im 19. Jahrhundert nachvollzogen werden. 
 
@@ -124,32 +129,85 @@ Die Erkenntnisse aus der Untersuchung des Konzertpublikums des 19. Jahrhunderts 
 	\item Welche Gemeinsamkeiten und Unterschiede lassen sich im Vergleich mit dem Konzertpublikum des 19. Jahrhunderts finden?
 \end{itemize}
 
-\chapter{Historischer Teil}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Historischer Teil %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Das Musikleben im 18. Jahrhundert}
 
-\section{Das Musikleben im 19. Jahrhundert}
+\part{Historischer Teil}
+% begingropu und endgroup umfassen einen Bereich ohne Pagebreak
 
-\subsection{Historischer Überblick: Das 19. Jahrhundert}
+\begingroup
+\renewcommand{\cleardoublepage}{}
+\renewcommand{\clearpage}{}
 
-\subsection{Oper und Konzert - Gemeinsamkeiten und Unterschiede}
+\chapter{Einleitung}
+Um die Zusammensetzung des heutigen KOnzertpublikums zu untersuchen erscheint es sinnvoll, zuerst einen Blick auf die Genese des Konzerts zu werfen: Wann ist das Konzert, so wie wir es heute kennen, entstanden? Aus welchen Formen ist es entstanden, welche Vorläufer gab es? Auf Basis der Antworten auf diese Fragen lassen sich dann die heutigen Entwicklungen diskutieren.
 
-\subsection{Konzerttypen im 19. Jahrhundert}
+Um einen guten Überblick über die Genese des Konzerts zu bieten, werden im ersten Abschnitt die Anfänge der Entwicklung zum Konzert betrachtet werden. Im zweiten Abschnitt wird es um das Musikleben im 19. JAhrhundert gehen. Neben einem kurzen historischen Überblick über die wichtigsten Geschehnisse dieses Jahrhunderts sollen, neben den Unterschieden zwischen dem Opernpublikum und dem Konzertpublikum, hautpsächlich die für die Entstehung des \enquote{bürgerlichen} Konzerts bedeutenden Formen dargestellt werden: 
+\begin{inparaenum}[(1)]
+	\item das Liebhaberkonzert, 
+	\item die geschlossene Konzertvereinigung, sowie 
+	\item die professionelle Konzertgesellschaft.
+\end{inparaenum}
+
+
+
+\chapter{Das Musikleben im 18. Jahrhundert}\label{18jh}
+Mix aus verschiedenen Stücke, arien etc (Weber: 3)
+
+Aus heutiger PErspektive erstaunlich erscheint die Tatsache, dass das Liebhaberkonzert im Grunde ein Potpourri aus den verschiedensten WErken war. Typischerweise eröffnete es mit einem Satz aus einer Sinfonie, auf den Lieder, Arien, und virtuose Instrumentalstücke folgten. (Literatur!!!)
+
+
+\endgroup
+
+\chapter{Das Musikleben im 19. Jahrhundert}
+
+\section{Historischer Überblick: Das 19. Jahrhundert}
+
+\section{Oper und Konzert - Gemeinsamkeiten und Unterschiede}
+
+\section{Konzerttypen im 19. Jahrhundert}
+Bei der Analyse des Publikums lassen sich in der Literatur zwei Tendenzen erkennen. In den Werken von \citet{weber_music_2004} und \citet{bourdieu_feinen_2012} findet sich die klare Unterscheidung zwischen \emph{high culture} und \emph{popular culture} bei Weber, beziehungsweise \emph{legitimen}, \emph{mittlerem} und \emph{populärem Geschmack} bei Bourdieu. Bei neueren Untersuchungen, unter anderem bei \citet{gebesmair_grundzuge_2001} sowie \citet{muller_publikum_2014} wird diese Sicht teilweise kritisiert und relativiert. Ich möchte trotzdem mit einer Darstellung der Überlegungen bei Weber beginnen. Im späteren Verlauf der Arbeit sollen dann die Unzulänglichkeiten dieser Sichtweise diskutiert werden.
+
+Liebhaberkonzert == benefit concert
+
+\subsection{Das Liebhaberkonzert}
+Obwohl der Terminus der \enquote{populären Musik} umstritten sein mag, so war doch das Liebhaberkonzert ein wichtiger Schritt auf dem Weg zur Form des Konzerts, so wie wir sie heute erleben. In der ersten HÄlfte des 19. Jahrhunderts gehörte es zu einer ----------, die maßgeblich an der Erweiterung des Publikums beteiligt war. Zu dieser ----- gehörten unter anderem eine institutionalisierte Form von Salons und Konzerten, die zusammen mit dem aufkeimendem Unternehmertum und der professionalisierung der MusikerInnen ein wachsendes Publikum aus der Aristokratie und der oberen Mittelschicht für sich gewinnen konnte.
+
+Um die Rahmenbedinungen des Liebhaberkonzerts besser zu verstehen lohnt sich ein Blick in die Welt des Publikums dieser Konzerte.
+
+Musik hatte für die aristokratischen Zirkel und die auf eine Verbesserung ihrer gesellschaftlichen Position bedachte obere Mittelschicht mehrere Funktionen. Ein erster Grund für die Tatsache, dass Musik eine immere wichtigere Rolle im Leben der Menschne einnahm war ihre Verankerung in der Familie. Zuerst einmal war eine musikalische ERziehung der Kinder ein guter Weg, sie Disziplin zu lehren: das ERlernen eines Musikinstruments fordert regelmäßige und konzentrierte Übung, folglich ein gewisses Maß an Dispziplin. \parencite[35ff.]{weber_music_2004} In der Folge waren musizierende Kinder auch ein probates Mittel, um in den Salons der Aristokratie einen guten Eindruck zu machen. Die Zusammenkünfte in den Salons waren in mehrerlei Hinsicht gesellscahftlich bedeutsam. Für junge, musizierende Mädchen war es mitunter ein guter Ort um Aufmerksamkeit auf sich zu lenken, die eventuell in einer Ehe mit einer bedeutenden Familie enden könnte. Auch die Zurschaustellung des eigenen Lebenstils, zum Beispiel durch die Wahl der Kleidung war ein wichtiger Bestandteil der Salsons.\footnote{Auf die ---- des Lebenstils wird im Abschnitt \ref{lebensstil} eingegangen werden.} Nicht zuletzt war der Erweb musikalischer Fähigkeiten, um sich in den Salons der angesehenen Familien bewegen zu können, teilweise auch ein Weg zu einer guten Anstellung: \blockquote[{\cite[37]{weber_music_2004}}]{A correspondent to a Leipzig music magazine reported that in Vieanna young men took up chamber music in order to gain access to the salons of thighly-placed families through whom they migth get good jobs.}
+
+Auch war die Rolle der Frauen in diesen Kreisen insgesamt eine sehr bedeutsame. Frauen waren nicht nur von klein auf musikalisch tätig, was sie auch oft nach der Hochzeit fortsetzten. Sie waren auch für das gesellschaftliche Familienleben im Allgemeinen zuständig: Frauen organisierten die Zusammenkünfte in den Salons, stellten die Gäste vor, und führten die Konverstation. Auch die Tatsache, dass der Gesang und das Klavierspiel, zwei -- zumindest zur damaligen Zeit -- Domänen der Frauen, die beliebtesten musikalischen Formen in den Salons waren, spricht für die Bedeutung, die Frauen im musikalischen Leben der Familien spielten. \parencite[41]{weber_music_2004}
+
+Wie in Kaptiel \ref{18jh} dargestellt, bestanden die frühen Formen des Konzerts aus einem Potpourri von verschiedenen Stücken, Arien, Tänzen und virtuosen Stücken. Das Liebhaberkonzert hatte anfangs eine ähnliche Zusammensetzung.
+
+Ausgehend vom Virtuosenkult um einzelne Instrumentalisten wie Franz Liszt oder Niccolò Paganini veranstalteten einzelne Musiker Konzerte, in denen sie selbst, sowie befreundete MusikerInnen auftraten. 
+
+
+\subsection{Lebensstil}
+\label{lebensstil}
+
 
 \subsection{Kanonbildung in der klassischen Musik}
 
-\chapter{Soziologischer Teil}
-\section{Bourdieu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Soziologischer Teil %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Sozialstruktur}
+\part{Soziologischer Teil}
+\chapter{Bourdieu}
 
-\section{Empirische Erhebungen zum klassischen Konzertpublikum}
+\chapter{Sozialstruktur}
+
+\chapter{Empirische Erhebungen zum klassischen Konzertpublikum}
 
 
 \chapter{Resümee}
 
 
-blabla \cite{bourdieu_feinen_2012}
+
 
 \printbibliography
 \end{document}
