@@ -31,7 +31,15 @@
 
 \DefineBibliographyStrings{english}{andothers={et\ al\adddot}} % "u.a." zu "et al." 
 % \DefineBibliographyStrings{english}{bibliography = {References}}
-% \DefineBibliographyStrings{german}{bibliography = {Literaturverzeichnis}}
+\DefineBibliographyStrings{german}{bibliography = {Literaturverzeichnis}}
+
+% Internetquellen und sonstige Quellen separat
+\defbibheading{LV}{\section*{Literaturverzeichnis}}
+\defbibheading{IQ}{\section*{Internetquellen}}
+ 
+\defbibfilter{LV}{\not\keyword{Internet}}
+\defbibfilter{IQ}{\keyword{Internet}}
+ 
 
 
 %richtige Reihenfolge bei mehreren Autoren
@@ -222,14 +230,22 @@ Innerhalb dieser Konzertgesellschaften entstand auch eine zunehmende Kanonisieru
 
 \section{Professionalisierung des Konzertbetriebs}
 \label{professionalisierung}
+Die Professionalisierung des Konzertbetriebs war ein bedeutender Schritt zur Entwicklung des modernen Konzertes. Für Symphonieorchester heute mehr oder weniger selbstverständlich Dinge wie ein/e DirigentIn oder mehrere Proben vor einer Aufführung waren im 19. Jahrhundert noch keine Selbstverständlichkeit. So war es beispielsweise üblich, dass die Leitung des Ensembles jeweils wechselte: jeweils unterschiedliche Musiker des Ensembles übernahmen für einzelne Konzerte die Leitung des Konzerts. \parencite[68]{weber_music_2004} Alternativ war es auch möglich, dass entweder der/die KonzertmeisterIn oder auch der/die KomponistIn, zum Beispiel vom Klavier aus die Einsätze gab. Die Einführung einer fixen künstlerischen Leitung in Form eines/r DirigentIn führte verständlicherweise zu einer genaueren, ergo \enquote{besseren} Darbietung.\footnote{Die Fragen, was in diesem Zusammenhang als \enquote{gut} oder \enquote{besser} zu verstehen ist, ist beileibe keine eindeutige. Schon im 19. Jahrhundert war die Frage nach der \enquote{Werktreue} eine heiß diskutierte. Unstrittig bleibt aber, dass durch die Einführung eines/r DirigentIn im Orchester größere Ordnung herrschte, was der Qualität der Aufführungen, sofern man darunter eine akkurate Wiedergabe des Werkes versteht, sicherlich zuträglich war.}
 
-Dirigent
-Sitzordnung im Orchester? (Müller weiter hinten)
+Neben der \enquote{Erfindung} des/r DirigentIn (Müller) war auch die Einführung mehrer Proben ein wichtiger Schritt, um das Niveau der Aufführungen zu heben. Nicht zuletzt durch die steigende Anzahl von Proben bestanden die Ensembles zunehmend aus professionellen MusikerInnen, welche als Hauptbeschäftigung der Musik nachgingen. Diese Feststellung ist deshalb wichtig, da in den Anfängen des Konzertbetriebes die musizierenden Personen meist Amateure waren: sie gingen hauptberuflich einer anderen Tätigkeit nach, und \enquote{dilettierten} in ihrer Freizeit.
+
+Am Begriff des \emph{Dilettanten} lässt sich dieser Wandel leicht zeigen. Der Duden listet für das Wort \enquote{Dilletant} zwei Bedeutungen:
+\begin{inparaenum}[(a)]
+	\item jemand, der sich mit einem bestimmten [künstlerischen, wissenschaftlichen] Gebiet nicht als Fachmann, sondern lediglich aus Liebhaberei beschäftigt, sowie
+	\item (abwertend) jemand, der sein Fach nicht beherrscht.
+\end{inparaenum}
+\parencite{Duden}
+
+Besonders die abwertende Verwendung des Wortes scheint heute die geläufige zu sein. Ganz im Gegensatz dazu steht seine Konnotation im 19. Jahrhundert: Der in seiner Freizeit dilletierende Bürger galt quasi als Ideal. Besonders in Wien waren die dilettierenden Musiker von großer Bedeutung und bremsten somit die Professionalisierung. \parencite[88]{weber_music_2004}
+
+
 Sitzplatznummerierung
-Amatuere weniger wichtig - Profis spielen die Musik
-mehr Proben
 
-aufgehalten durch Diletantismus (Wien)
 \section{Der Lebensstil des Konzertpublikums} %ev: die soziale Zusammensetzung des Publikums?
 \label{lebensstil}
 
@@ -256,10 +272,11 @@ Publizierung der Mitgliederlisten
 
 \part{Diskussion}
 \chapter{Resümee}
+blbabla
 
 
 
-
-\printbibliography
+\printbibliography[filter=LV]
+\printbibliography[heading=IQ, filter=IQ]
 \end{document}
 
