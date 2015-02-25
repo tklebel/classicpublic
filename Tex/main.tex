@@ -22,6 +22,8 @@
 % Bessere Formatierung für Tabellen
 \usepackage{booktabs}
 
+% befehl: smaller, für relative schriftgröße
+\usepackage{relsize}
 
 \usepackage[babel,german=quotes]{csquotes}  % Deutsche Anführungszeichen mit \enquote{}
 
@@ -61,10 +63,21 @@
 \DeclareUnicodeCharacter{00A0}{ }
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Zitieren %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % % Blockzitat mit Anführungszeichen
 % \renewcommand*{\mkblockquote}[4]{\enquote{#1}#2#4#3}
+
+% Blockzitat etwas kleiner
+\newenvironment*{smallquote}
+  {\quote\smaller}
+  {\endquote}
+
+% Now we instruct csquotes to use the new environment:
+
+\SetBlockEnvironment{smallquote}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 	\begin{titlepage}
@@ -295,11 +308,19 @@ Unter sozialem Kapital sind die sozialen Beziehungen zu anderen Menschen gemeint
 Schließlich spricht Bourdieu noch vom symbolischen Kapital, welches allgemein mit Prestige, gutem Ruf und Anerkennung gleichzusetzen ist, und insofern eine Art Oberbegriff für die anderen drei Kapitalsorten bildet, der selbige subsumiert. (vgl. \cite[540]{joas_sozialtheorie:_2004} sowie \cite[87]{luthje_medium_2008})
 
 \subsection{Zusammenwirken der Kapitalsorten}
-Die verschiedenen Kapitalsorten treten in den meisten Fällen nicht unabhängig voneinander auf. Jedes Individuum hat unterschiedlich große Mengen der verschiedenen Kapitalien zur Verfügung. So haben zum Beispiel, in einer idealtypischen Analyse, HochschullehrerInnen und Industrie-, bzw. HandelsuntermehmerInnen ein ähnlich großes Kapitalvolumen, welches sich aber unterschiedlich zusammensetzt. Nach Bourdieu haben HochschullehrerInnen ein hohes ökonomisches Kapital, dafür ein geringeres ökonomisches Kapital, im Gegensatz zu VertreterInnen der Industrie, bei denen es umgekehrt ist. \parencite[vgl.][541]{joas_sozialtheorie:_2004}
+Die verschiedenen Kapitalsorten treten in den meisten Fällen nicht unabhängig voneinander auf. Jedes Individuum hat unterschiedlich große Mengen der verschiedenen Kapitalien zur Verfügung. So haben zum Beispiel, in einer idealtypischen Analyse, HochschullehrerInnen und Industrie-, bzw. HandelsuntermehmerInnen ein ähnlich großes Kapitalvolumen, welches sich aber unterschiedlich zusammensetzt. Nach Bourdieu haben HochschullehrerInnen ein hohes ökonomisches Kapital, dafür ein geringeres ökonomisches Kapital, im Gegensatz zu VertreterInnen der Industrie, bei denen es umgekehrt ist. (Siehe dazu auch Abbildung \ref{kapitalgrafik}) \parencite[vgl.][541]{joas_sozialtheorie:_2004}
 
-$-->$ Grafik von Joas S. 541 einfügen
 
-Plastischer darstellen lässt sich dieser Zusammenhang an einem Beispiel. Obwohl Studierende während des Studiums meist ein geringes ökonomisches Kapital zur Verfügung haben, erwerben sie eben durch ihr Studium eine Menge an anderem Kapital: Im Laufe ihres Studiums bauen sie Beziehungen und Netzwerke auf, die Menge an sozialem Kapital steigt also. Zugleich erwerben sie eine große Menge an Wissen, einerseits Faktenwissen, andererseits auch Wissen um die Regeln in einem gewissen Feld, sie bauen also ihr kulturelles Kapital aus. Nicht zuletzt durch den Erwerb eines (Bildungs-)Titels haben sie am Ende ihres Studiums eine große Menge an Kapital angesammelt, welches sie mit dem Eintritt in die Berufswelt in ökonomisches Kapital umwandeln können.
+\begin{figure}[htbp]
+	\centering
+  		\includegraphics{Kapitalien.pdf}
+	\caption{Berufsgruppen nach Kapitalsorten. Quelle: \cite[541]{joas_sozialtheorie:_2004}}
+	\label{kapitalgrafik}
+\end{figure}
+
+
+
+Plastischer darstellen lässt sich dieser Zusammenhang anhand eines Beispiels. Obwohl Studierende während des Studiums meist ein geringes ökonomisches Kapital zur Verfügung haben, erwerben sie eben durch ihr Studium eine Menge an anderem Kapital: Im Laufe ihres Studiums bauen sie Beziehungen und Netzwerke auf, die Menge an sozialem Kapital steigt also. Zugleich erwerben sie eine große Menge an Wissen, einerseits Faktenwissen, andererseits auch Wissen um die Regeln in einem gewissen Feld, sie bauen also ihr kulturelles Kapital aus. Nicht zuletzt durch den Erwerb eines (Bildungs-)Titels haben sie am Ende ihres Studiums eine große Menge an Kapital angesammelt, welches sie mit dem Eintritt in die Berufswelt in ökonomisches Kapital umwandeln können.
 
 Diese Überlegungen führt Bourdieu im Konzept des Habitus zusammen, welches wohl einen seiner meist zitierten Begriffe darstellt.
 
@@ -307,16 +328,26 @@ Diese Überlegungen führt Bourdieu im Konzept des Habitus zusammen, welches woh
 
 \section{Habitus}
 \label{habitus}
-Bourdieu geht davon aus, dass allen Menschen ein spezifischer Habitus innewohnt, der in Zusammenhang mit ihrer sozialen Lage steht. Unter Habitus versteht er hier Denk-, Wahrnehmungs-, und Verhaltensschemata, die durch die Sozialisation erlernt wurden, und vermittels derer man die Welt begreift nach ihnen handelt. Joas vermerkt dazu: \blockquote[{\cite[533]{joas_sozialtheorie:_2004}}]{Unsere Körperbewegungen, unser Geschmack, unsere banalsten Deutungen der Welt werden schon frühzeitig geformt und bestimmen dann in entscheidendem Ausmaß unsere weiteren Handlungsmöglichkeiten.} Keinesfalls ist damit eine völlige Determiniertheit durch die Zugehörigkeit zu einer Klasse gemeint. Bourdieu vertritt vielmehr die Ansicht, dass die durch die Sozialisation verinnerlichten, und damit auch inkorporierten, Handlungs-, und Verhaltensweisen relativ stabil bleiben, und somit auch eindeutig zuordenbar sind.
+Bourdieu geht davon aus, dass allen Menschen ein spezifischer Habitus innewohnt, der in Zusammenhang mit ihrer sozialen Lage steht. Unter Habitus versteht er hier Denk-, Wahrnehmungs-, und Verhaltensschemata, die durch die Sozialisation erlernt wurden, und vermittels derer man die Welt begreift nach ihnen handelt. Joas vermerkt dazu: \blockquote[{\cite[533]{joas_sozialtheorie:_2004}}]{Unsere Körperbewegungen, unser Geschmack, unsere banalsten Deutungen der Welt werden schon frühzeitig geformt und bestimmen dann in entscheidendem Ausmaß unsere weiteren Handlungsmöglichkeiten.} Keinesfalls ist damit eine völlige Determiniertheit durch die Zugehörigkeit zu einer Klasse gemeint. \blockquote[{\cite[69]{schwingel_pierre_2009}}]{Durch die äußeren materiellen, kulturellen und sozialen Existenzbedingungen - d.h. durch die gesellschaftlichen Strukturen - und deren verinnerlichende Transformation in habituelle Denk-, Erwartungs-, und Handlungsstrukturen werden lediglich die Grenzen möglicher und unmöglicher Praktiken festgelegt, nicht aber die Praktiken an sich.}
 
-In seinem Werk \emph{Die feinen Unterschiede. Kritik der gesellschaftlichen Urteilskraft} untersucht er ausführlich den Geschmack und Lebensstil der französischen Bevölkerung. 
+Der Habitus legt also den Spielraum fest, innerhalb dessen sich soziale Praktiken der AkteurInnen abspielen. Auch die Art und Weise, wie bestimmte Praktiken ausgeführt werden, wird durch den Habitus bestimmt.
+
+\blockquote[{\cite[71]{schwingel_pierre_2009}}]{[Beispielsweise] ist es keineswegs ausgeschlossen, dass (...) das von Bourdieu gerne thematisierte Kleinbürgertum sich Praktiken (etwa bestimmte prestigeträchtige Sportarten oder den Besuch von Museen) zu Eigen macht, die traditionellerweise dem Groß- bzw. Bildungsbürgertum vorbehalten sind oder waren. Doch die Art der Ausführung dieser Praktiken wird sich durch ihren spezifischen Modus operandi, hier: durch den Eifer, groß- oder bildungsbürgerliche Ziele und Standards zu erreichen, durch die Beflissenheit in der Erfüllung bürgerlicher Normen, als typisch kleinbürgerliche zu erkennen geben.}
+
+Bourdieu zufolge sind je nach Klassenzugehörigkeit der Geschmack, und daraus folgend der Lebenstil, unterschiedlich, und dadurch auch klar zuzuordnen. 
+
+\blockquote[{\cite[278]{bourdieu_feinen_2012}}]{Der Habitus bewirkt, daß die Gesamtheit der Praxisformen eines Akteurs (oder einer Gruppe von aus ähnlichen Soziallagen hervorgegangengen Akteuren) als Produkt der Anwendung identischer (...) Schemata zugleich systematischen Charakter tragen und systematisch unterschieden sind von den konstitutiven Praxisformen eines anderen Lebensstils.}
+
+\section{Geschmack und Distinktion}
+
+% In seinem Werk \emph{Die feinen Unterschiede. Kritik der gesellschaftlichen Urteilskraft} untersucht er ausführlich den Geschmack und Lebensstil der französischen Bevölkerung. 
 
 % ausführlicher darstellen: legitimen geschmack, diskurs um hohe kunst, inwiefern hängt das mit dem lebensstil zusammen. leitet über zum nächsten abschnitt
 
 \section{Oper und Konzert - unterschiedliche Distinktionspraktiken im Fokus}
 \label{operUndKonzert}
 
-\chapter{Sozialstruktur} %vielleicht auslassen?
+% \chapter{Sozialstruktur} %vielleicht auslassen?
 
 \chapter{Empirische Erhebungen zum klassischen Konzertpublikum}
 
